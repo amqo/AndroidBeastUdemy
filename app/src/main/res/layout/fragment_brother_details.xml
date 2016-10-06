@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#44000000">
+
+    <RelativeLayout
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center" >
+
+        <ImageView
+            android:id="@+id/fragment_brother_detail_brotherPircture"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ProgressBar
+            android:id="@+id/fragment_brother_detail_progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/fragment_brother_detail_brotherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/fragment_brother_detail_brotherMajor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Major" />
+
+    <TextView
+        android:id="@+id/fragment_brother_detail_brotherCrossed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Crossed" />
+
+    <TextView
+        android:id="@+id/fragment_brother_detail_brotherFunFact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fun Fact"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="left"/>
+
+    <TextView
+        android:id="@+id/fragment_brother_detail_whyJoinedHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/why_joined_header"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="left"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/fragment_brother_detail_brotherWhyJoined"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FBrother joined for that"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="left"/>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BeastMainProject</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="why_joined_header">Why Joined</string>
+
+    <string name="major_intro">Major: %1$s</string>
+    <string name="fun_fact">Fun Fact: %1$s</string>
+    <string name="crossed_semester_intro">Joined: %1$s</string>
+</resources>
