@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import android.view.ViewGroup;
 import com.example.alberto.beastmainproject.R;
 import com.example.alberto.beastmainproject.activities.BaseActivity;
 import com.example.alberto.beastmainproject.activities.PhotoPagerActivity;
+import com.example.alberto.beastmainproject.activities.YoutubeActivity;
 import com.example.alberto.beastmainproject.entities.EventCard;
 import com.example.alberto.beastmainproject.services.EventCardServices;
 import com.example.alberto.beastmainproject.views.adapters.AboutUsAdapter;
@@ -61,7 +61,8 @@ public class AboutUsFragment extends BaseFragment implements AboutUsAdapter.Abou
     @Override
     public void OnEventCardClicked(EventCard eventCard) {
         if (eventCard.isVideo()) {
-            Log.i(AboutUsFragment.class.getSimpleName(), eventCard.getEventName() + " is a Video");
+            Intent intent = YoutubeActivity.newIntent(getActivity(), eventCard);
+            startActivity(intent);
         } else {
             Intent intent = PhotoPagerActivity.newIntent(getActivity(), eventCard);
             startActivity(intent);

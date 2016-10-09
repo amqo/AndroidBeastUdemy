@@ -15,4 +15,12 @@
         <item name="android:textColor">#fff</item>
     </style>
 
+    <style name="YoutubeDialogActivity" parent="Base.Theme.AppCompat.Dialog" >
+        <item name="android:windowMinWidthMajor">97%</item>
+        <item name="android:windowMinWidthMinor">97%</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
 </resources>

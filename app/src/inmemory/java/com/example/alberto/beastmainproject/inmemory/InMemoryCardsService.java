@@ -25,7 +25,7 @@ public class InMemoryCardsService extends BaseInMemory{
                             "Community Event " + i,
                             "Community Event Description " + i,
                             "http://www.gravatar.com/avatar/" + i + "?d=identicon",
-                            false, "NA")
+                            false, "j7HfxgQdDW4")
             );
         }
 
@@ -44,7 +44,7 @@ public class InMemoryCardsService extends BaseInMemory{
                             "BrotherHood Event " + i,
                             "BrotherHood Event Description " + i,
                             "http://www.gravatar.com/avatar/" + i + "?d=identicon",
-                            i == 4, "NA")
+                            i == 4, "j7HfxgQdDW4")
             );
         }
 
@@ -63,7 +63,7 @@ public class InMemoryCardsService extends BaseInMemory{
                             "Social Event " + i,
                             "Social Event Description " + i,
                             "http://www.gravatar.com/avatar/" + i + "?d=identicon",
-                            false, "NA")
+                            false, "j7HfxgQdDW4")
             );
         }
 
