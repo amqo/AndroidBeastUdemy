@@ -31,18 +31,18 @@ public class MeetABroViewHolder extends RecyclerView.ViewHolder {
         itemView.setTag(brother);
 
         Picasso.with(context).load(brother.getBrotherPicture())
-                .fit()
-                .centerCrop()
-                .into(brotherPicture, new Callback() {
-                    @Override
-                    public void onSuccess() {
-                        brotherProgressBar.setVisibility(View.GONE);
-                    }
+            .fit()
+            .centerCrop()
+            .into(brotherPicture, new Callback() {
+                @Override
+                public void onSuccess() {
+                    brotherProgressBar.setVisibility(View.GONE);
+                }
 
-                    @Override
-                    public void onError() {
+                @Override
+                public void onError() {
 
-                    }
-                });
+                }
+            });
     }
 }

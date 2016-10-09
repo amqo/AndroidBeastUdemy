@@ -29,10 +29,6 @@ public class MeetABroAdapter extends RecyclerView.Adapter<MeetABroViewHolder> im
         brothers = new ArrayList<>();
     }
 
-    public ArrayList<Brother> getBrothers() {
-        return brothers;
-    }
-
     public void setBrothers(ArrayList<Brother> brothers) {
         this.brothers = brothers;
     }

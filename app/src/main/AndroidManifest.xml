@@ -27,6 +27,10 @@
         <activity android:name=".activities.BrotherPagerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/CustomDialogActivity"/>
+
+        <activity android:name=".activities.PhotoPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/CustomDialogActivity"/>
     </application>
 
 </manifest>

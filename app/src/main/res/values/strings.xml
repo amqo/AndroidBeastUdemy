@@ -9,4 +9,8 @@
     <string name="major_intro">Major: %1$s</string>
     <string name="fun_fact">Fun Fact: %1$s</string>
     <string name="crossed_semester_intro">Joined: %1$s</string>
+
+    <string name="intro_header">Introduction</string>
+    <string name="intro_body">This app was made by whatever</string>
+
 </resources>

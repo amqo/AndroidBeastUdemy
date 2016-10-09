@@ -6,7 +6,7 @@ import java.util.List;
 
 public class BrotherServices {
 
-    public BrotherServices() {
+    private BrotherServices() {
     }
 
     public static class SearchBrotherRequest {
