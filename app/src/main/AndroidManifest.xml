@@ -14,7 +14,8 @@
         android:name=".infrastructure.BeastApplication" >
 
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.SplashScreenActivity"
+            android:theme="@style/SplashScreenStyle"
             android:screenOrientation="portrait">
 
             <intent-filter>
@@ -23,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activities.MainActivity"
+            android:screenOrientation="portrait" />
 
         <activity android:name=".activities.BrotherPagerActivity"
             android:screenOrientation="portrait"
@@ -37,14 +41,17 @@
             android:theme="@style/YoutubeDialogActivity"/>
 
         <activity android:name=".activities.ActivityMaps"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait"/>
 
         <activity android:name=".activities.ActivityMapsCampus"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAVeXl6aSyFOv62k_ST-nVviMtfZRZby8w" />
+
     </application>
 
 </manifest>

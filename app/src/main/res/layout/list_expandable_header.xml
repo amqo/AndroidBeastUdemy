@@ -3,19 +3,25 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="30dp"
     android:layout_gravity="center"
     android:orientation="vertical"
-    app:cardCornerRadius="2dp"
+    app:cardCornerRadius="10dp"
     app:cardElevation="5dp"
     android:layout_marginBottom="10dp"
-    app:contentPadding="10dp">
+    android:layout_margin="5dp"
+    android:background="@drawable/rush_cards_background"
+    app:contentPadding="5dp">
 
 
     <LinearLayout
         android:id="@+id/list_expandable_header_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/rush_cards_background"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:orientation="horizontal">
 
         <TextView
