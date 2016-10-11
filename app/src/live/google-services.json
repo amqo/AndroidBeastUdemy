@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1052781138275",
+    "firebase_url": "https://beastandroidcourse-67c94.firebaseio.com",
+    "project_id": "beastandroidcourse-67c94",
+    "storage_bucket": "beastandroidcourse-67c94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1052781138275:android:512b24dd06be9258",
+        "android_client_info": {
+          "package_name": "com.example.alberto.beastmainproject.live"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1052781138275-il7uiv5f91jh4eg2ik9b4ip00nlbsln4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.alberto.beastmainproject.live",
+            "certificate_hash": "FADDBEC1B41FD8E9B30CCAF64087AAC43D290280"
+          }
+        },
+        {
+          "client_id": "1052781138275-of915rt7aq6561ucj4269oenji6g34ta.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC38pTm8SzGDvebk1W_9sPVfyB3yuMMXmM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1052781138275-of915rt7aq6561ucj4269oenji6g34ta.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

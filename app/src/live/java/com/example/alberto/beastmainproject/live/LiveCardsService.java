@@ -1,4 +1,4 @@
-package com.example.alberto.beastmainproject.inmemory;
+package com.example.alberto.beastmainproject.live;
 
 import com.example.alberto.beastmainproject.entities.EventCard;
 import com.example.alberto.beastmainproject.infrastructure.BeastApplication;
@@ -7,9 +7,9 @@ import com.squareup.otto.Subscribe;
 
 import java.util.ArrayList;
 
-public class InMemoryCardsService extends BaseInMemory {
+public class LiveCardsService extends BeastLiveService {
 
-    public InMemoryCardsService(BeastApplication application) {
+    public LiveCardsService(BeastApplication application) {
         super(application);
     }
 

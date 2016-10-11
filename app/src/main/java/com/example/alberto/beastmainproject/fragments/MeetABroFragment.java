@@ -12,6 +12,7 @@ import com.example.alberto.beastmainproject.R;
 import com.example.alberto.beastmainproject.activities.BaseActivity;
 import com.example.alberto.beastmainproject.activities.BrotherPagerActivity;
 import com.example.alberto.beastmainproject.entities.Brother;
+import com.example.alberto.beastmainproject.infrastructure.BeastApplication;
 import com.example.alberto.beastmainproject.services.BrotherServices;
 import com.example.alberto.beastmainproject.views.adapters.MeetABroAdapter;
 import com.squareup.otto.Subscribe;
@@ -40,9 +41,11 @@ public class MeetABroFragment extends BaseFragment implements MeetABroAdapter.On
         View rootView = inflater.inflate(R.layout.fragment_meet_a_bro, container, false);
         ButterKnife.bind(this, rootView);
 
+        brothers = new ArrayList<>();
+
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 4));
         setUpAdapter();
-        bus.post(new BrotherServices.SearchBrotherRequest("brothers"));
+        bus.post(new BrotherServices.SearchBrotherRequest(BeastApplication.FIREBASE_BROTHER_REFERENCE));
 
         return rootView;
     }
@@ -62,9 +65,11 @@ public class MeetABroFragment extends BaseFragment implements MeetABroAdapter.On
 
     @Subscribe
     public void getBrothers(BrotherServices.SearchBrotherResponse response) {
-        brothers = new ArrayList<>();
-        brothers.addAll(response.brothers);
-        adapter.setBrothers(brothers);
+        if (brothers.isEmpty()) {
+            brothers.addAll(response.brothers);
+            adapter.setBrothers(brothers);
+            adapter.notifyDataSetChanged();
+        }
     }
 
 }

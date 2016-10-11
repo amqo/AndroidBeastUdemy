@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentManager;
 
 import com.example.alberto.beastmainproject.R;
 import com.example.alberto.beastmainproject.entities.Brother;
+import com.example.alberto.beastmainproject.fragments.MeetABroFragment;
 
 public class PracticeActivity extends BaseActivity {
 
@@ -23,7 +24,7 @@ public class PracticeActivity extends BaseActivity {
         Fragment fragment = fragmentManager.findFragmentById(R.id.activity_practice_fragment_container);
 
         if (fragment == null) {
-            fragment = null;
+            fragment = MeetABroFragment.newInstance();
             fragmentManager.beginTransaction()
                     .add(R.id.activity_practice_fragment_container, fragment)
                     .commit();

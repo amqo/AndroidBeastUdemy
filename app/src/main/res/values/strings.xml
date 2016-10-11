@@ -13,4 +13,10 @@
     <string name="intro_header">Introduction</string>
     <string name="intro_body">This app was made by whatever</string>
 
+    <string name="follow_us">Follow Us On Social Media</string>
+    <string name="rush_intro">What is Rush?</string>
+    <string name="rush_explained">Rush is requirement</string>
+
+    <string name="rush_events">Rush Events</string>
+
 </resources>

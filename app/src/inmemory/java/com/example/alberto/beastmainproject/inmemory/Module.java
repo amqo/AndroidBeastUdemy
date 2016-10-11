@@ -7,5 +7,6 @@ public class Module {
         new InMemoryBrotherService(application);
         new InMemoryCardsService(application);
         new InMemmoryPictureService(application);
+        new InMemoryRushService(application);
     }
 }

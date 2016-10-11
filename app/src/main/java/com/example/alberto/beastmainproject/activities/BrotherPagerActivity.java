@@ -12,6 +12,7 @@ import android.support.v4.view.ViewPager;
 import com.example.alberto.beastmainproject.R;
 import com.example.alberto.beastmainproject.entities.Brother;
 import com.example.alberto.beastmainproject.fragments.BrotherDetailFragment;
+import com.example.alberto.beastmainproject.infrastructure.BeastApplication;
 import com.example.alberto.beastmainproject.services.BrotherServices;
 import com.squareup.otto.Subscribe;
 
@@ -33,7 +34,9 @@ public class BrotherPagerActivity extends BaseActivity {
         setContentView(R.layout.activity_brother_pager);
         ButterKnife.bind(this);
 
-        bus.post(new BrotherServices.SearchBrotherRequest("brothers"));
+        brothers = new ArrayList<>();
+
+        bus.post(new BrotherServices.SearchBrotherRequest(BeastApplication.FIREBASE_BROTHER_REFERENCE));
 
         setUpAdapter();
     }
@@ -51,10 +54,6 @@ public class BrotherPagerActivity extends BaseActivity {
                 return brothers.size();
             }
         });
-
-        Brother firstBrother = getIntent().getParcelableExtra(PracticeActivity.BROTHER_EXTRA_INFO);
-        int firstBrotherIndex = getBrotherIndexById(firstBrother.getBrotherId());
-        brotherViewPager.setCurrentItem(firstBrotherIndex);
     }
 
     private int getBrotherIndexById(int id) {
@@ -66,8 +65,13 @@ public class BrotherPagerActivity extends BaseActivity {
 
     @Subscribe
     public void getBrothers(BrotherServices.SearchBrotherResponse response) {
-        brothers = new ArrayList<>();
+        brothers.clear();
         brothers.addAll(response.brothers);
+        brotherViewPager.getAdapter().notifyDataSetChanged();
+
+        Brother firstBrother = getIntent().getParcelableExtra(PracticeActivity.BROTHER_EXTRA_INFO);
+        int firstBrotherIndex = getBrotherIndexById(firstBrother.getBrotherId());
+        brotherViewPager.setCurrentItem(firstBrotherIndex, false);
     }
 
     public static Intent newIntent(Context context, Brother brother) {
